@@ -1,0 +1,53 @@
+body {
+    /* background-color: #2f3135; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+.characters {
+    width: 50px;
+    padding: 15px;
+    background: transparent;
+}
+
+
+
+.wordInput {
+    /* background-color: #363a3f; */
+    padding: 5%;
+    
+}
+
+.word { 
+    display: flex;
+}
+
+input {
+    text-align: center;
+    font-size: 30px;
+}
+
+button {
+    background-color: #555555;
+    color: white;
+    padding: 15px 32px;
+    font-size:25px;
+    border-radius: 5%;
+}
+
+.display {
+    display: flex;
+    flex-direction: column ;
+    border: gray solid 2px;
+    width: 50%;
+    height: 50vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
