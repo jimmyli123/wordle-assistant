@@ -1,11 +1,30 @@
 
 document.querySelector('button').addEventListener('click', start)
-document.querySelectorAll('.characters').forEach(element => {
+document.querySelectorAll('.characters').forEach((element,index) => {
 element.addEventListener('keyup', function(event) {
     event.preventDefault()
+    console.log(event)
+    console.log(`Current element is: ${element}`)
+    if (element.value.length >= 1) {
+        if (index !== 4) {
+            let numb = index + 1
+            document.getElementById(`char${numb.toString()}`).focus()
+        }
+        
+    }
     if (event.keyCode === 13) {
-        console.log(event)
+        console.log(`I pressed enter`)
         start()
+        document.getElementById('char0').focus()
+    }
+    if (event.keyCode === 8) {
+        console.log('I pressed backspace')
+        if (index !== 0) {
+            let numb = index - 1
+            document.getElementById(`char${numb.toString()}`).value = ""
+            document.getElementById(`char${numb.toString()}`).focus()
+        }
+
     }
 })
 })
@@ -24,7 +43,7 @@ function start() {
             el.value = ""
         })
         for (let i = 0; i<word.length; i++) {
-            if (word[i] ==="" ) {
+            if (word[i] ==="" || word[i]===" ") {
                 word[i] = '?'
             }
         }
