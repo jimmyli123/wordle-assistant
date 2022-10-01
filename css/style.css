@@ -54,9 +54,13 @@ span {
 .display {
     display: flex;
     flex-direction: column ;
-    border: gray solid 2px;
+    /* border: gray solid 2px; */
     /* width: 20%; */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+#display__span { 
+    border: none;
 }
